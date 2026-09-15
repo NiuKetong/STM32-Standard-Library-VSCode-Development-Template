@@ -1,0 +1,25 @@
+{
+    "cmake.cmakePath": "cube-cmake",
+    "task.saveBeforeRun": "always",
+    "cmake.sourceDirectory": "${workspaceFolder}",
+    "cmake.configureArgs": [
+        "-DCMAKE_COMMAND=cube-cmake"
+    ],
+    "cmake.preferredGenerators": [
+        "Ninja"
+    ],
+    "stm32cube-ide-clangd.path": "cube",
+    "stm32cube-ide-clangd.arguments": [
+        "starm-clangd",
+        "--query-driver=${env:CUBE_BUNDLE_PATH}/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-gcc*",
+        "--query-driver=${env:CUBE_BUNDLE_PATH}/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-g++*"
+    ],
+    "VsCodeTaskButtons.tasks": [
+        {
+            "label": "$(zap) STM32 Download",
+            "task": "STM32: Build and Download (this workspace)",
+            "alignment": "right",
+            "tooltip": "Build and download the current STM32 project via ST-Link"
+        }
+    ]
+}
